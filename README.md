@@ -51,7 +51,7 @@ Questo repository documenta lo sviluppo di un esoscheletro robotico a 6 zampe pr
 ###  Preparazione hardware
 - [ ] Stampare i tip in TPU (flessibilità)
 - [ ] stampare Tibia con alloggio switch del tip
-- [KO] ammortizzamento tibia. NO: ammortizzamento oltre 2mm vanifica sline e raccordi se non cinematica stessa, spostare eventualmente in progetto finale in piastra di alloggio vano di carico centrale
+- X ammortizzamento tibia. NO: ammortizzamento oltre 2mm vanifica sline e raccordi se non cinematica stessa, spostare eventualmente in progetto finale in piastra di alloggio vano di carico centrale
 - [ ] Verificare fissaggio piedino su tibia
 - [ ] Montare una gamba singola per test (J1–J2–J3)
 
