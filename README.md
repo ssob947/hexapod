@@ -1,41 +1,43 @@
-Exapod – Modular Six-Leg Robot
+# Exapod – Modular Six-Leg Robot
 
-Work in progress.
-This repository documents the development of a fully custom hexapod robot, including mechanics, electronics, and joint calibration methods. Firmware will be added as soon as actual implementation work begins.
+**Work in progress.**  
+This repository documents the development of a fully custom hexapod robot, including mechanics, electronics, and joint calibration methods.  
+Firmware will be added once actual implementation work begins.
 
-Main Features
+---
 
-Modular legs with GXServo QY3242BLS brushless servos
+## 1. Overview
 
-Absolute encoders (AS5600 or MT6835) on each joint
+Exapod is a modular six-leg robot designed from scratch, combining:
 
-Mechanical structure in aluminium and 3D-printed parts
+- custom mechanics (aluminium + 3D-printed parts)
+- brushless servos (GXServo QY3242BLS)
+- absolute encoders (AS5600 / MT6835)
+- custom power distribution and protection
+- detailed servo and encoder calibration pipeline
 
-Custom power distribution (TDK-Lambda i7A, TVS protection, BTS443P high-side switches)
+The project focuses on accuracy, modularity, and maintainability.
 
-Detailed joint calibration pipeline (calibrated offsets, linear mapping, MAG/AGC reference)
+---
 
-Repository Structure
+## 2. Main Features
 
-mechanics/
-Models, drawings, 3D-printed parts, and laser-cut parts.
+### Mechanical
+- Aluminium laser-cut frame  
+- 3D-printed interfaces and housings  
+- First complete leg prototype successfully assembled  
 
-electronics/
-Schematics, power distribution notes, and component documentation.
+### Electronics
+- TDK-Lambda i7A power module  
+- BTS443P high-side switches on each leg  
+- TVS surge protection and dedicated power rails  
 
-docs/
-Calibration data, measurements, reference notes, and project documentation.
+### Sensors and Calibration
+- Absolute joint encoders with AGC/MAG diagnostics  
+- Per-joint angle calibration (microseconds to degrees)  
+- Reference linear models for each servo  
 
-firmware/
-To be added later.
-(No firmware is included yet; real implementation will be published once development begins.)
+---
 
-Project Status
+## 3. Repository Structure
 
-Mechanical prototype for a full leg completed
-
-Encoder diagnostics and calibration procedure defined
-
-Power system under evaluation
-
-Full controller firmware not started yet (will be documented here when available)
