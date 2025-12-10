@@ -8,7 +8,7 @@ Firmware will be added once actual implementation work begins.
 
 ## 1. Overview
 
-Exapod is a modular six-leg robot designed from scratch, combining:
+Modular six-leg robot designed from scratch, combining:
 
 - custom mechanics (aluminium + 3D-printed parts)
 - brushless servos (GXServo QY3242BLS)
@@ -25,7 +25,6 @@ The project focuses on accuracy, modularity, and maintainability.
 ### Mechanical
 - Aluminium laser-cut frame  
 - 3D-printed interfaces and housings  
-- First complete leg prototype successfully assembled  
 
 ### Electronics
 - TDK-Lambda i7A power module  
@@ -34,7 +33,7 @@ The project focuses on accuracy, modularity, and maintainability.
 
 ### Sensors and Calibration
 - Absolute joint encoders with AGC/MAG diagnostics  
-- Per-joint angle calibration (microseconds to degrees)  
+- Per-joint angle calibration
 - Reference linear models for each servo  
 
 ---
@@ -59,6 +58,7 @@ firmware/
 (To be added later)
 
 
+
 Firmware is intentionally omitted at this stage; it will be published once development begins.
 
 ---
@@ -66,18 +66,20 @@ Firmware is intentionally omitted at this stage; it will be published once devel
 ## 4. Project Status
 
 ### Completed
-- Mechanical prototype of one full leg  
-- Encoder diagnostics (AGC and MAG reference)  
-- Calibration procedure and linear mapping for servos  
+- IK of a simplified prototype leg  
+- Mechanical and assembly prototype of one full leg with linkage system  
+- Encoder accuracy and diagnostics (AGC and MAG reference)  
+- Calibration procedure and linear mapping for servos and leg joints  
+- Power PCB (main and leg) design, manufacturing, and assembly  
 
 ### In Progress
 - Body frame fabrication  
 - Mechanical refinement of legs  
-- Power system evaluation  
+- Main power PCB stress testing  
 
 ### Upcoming
 - Full controller firmware (Teensy 4.1)  
-- Inverse kinematics  
+- Full inverse kinematics  
 - Gait generation  
 - Integration of all six legs  
 
