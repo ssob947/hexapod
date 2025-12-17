@@ -1,5 +1,15 @@
 # Power Module LEG
+---
 
+## Project Status
+
+STATUS: TEST / WORK IN PROGRESS
+
+This PCB revision is currently under validation.  
+During this phase, differences between the uploaded Gerber files and the PCB pictures may occur.
+
+
+---
 ## Interface Summary
 
 
@@ -19,15 +29,6 @@
 Power distribution and protection module for a single Exapod leg.
 
 This board is designed to manage power delivery, protection, and signal conditioning for one leg, keeping the system modular and scalable.
-
----
-
-## Project Status
-
-STATUS: TEST / WORK IN PROGRESS
-
-This PCB revision is currently under validation.  
-During this phase, differences between the uploaded Gerber files and the PCB pictures may occur.
 
 ---
 
