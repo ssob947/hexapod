@@ -23,7 +23,7 @@ predictable kinematics rather than speed.
 
 ## Hardware Highlights
 
-### Mechanics
+### 3D
 - Aluminium laser-cut structure
 - 3D-printed structural and interface parts
 - Linkage-based joints where required
