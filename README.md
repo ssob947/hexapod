@@ -1,64 +1,88 @@
-Hexapod – Modular Six-Leg Robot
+# Hexapod – Modular Six-Leg Robot
+
 Work in progress.
 
-This repository documents the development of a custom modular hexapod robot, covering mechanics, electronics, sensing, and calibration procedures. Firmware will be published once active development begins.
+This repository documents the development of a custom modular hexapod robot, including mechanics, electronics, sensing, calibration procedures, and system architecture.
 
-Overview
-Custom six-leg robot designed from scratch with focus on:
+Firmware is currently under active development and will be published once the control framework reaches a stable state.
 
-modular mechanical design
-repeatable joint calibration
-robust power distribution
-maintainable control architecture
-The target application is object transport on flat surfaces, with emphasis on stability and predictable kinematics rather than speed.
+---
 
-Hardware Highlights
-Mechanics
-Aluminium laser-cut structure
-3D-printed structural and interface parts
-Linkage-based joints where required
-Electronics & Control
-Brushless servos (GXServo QY3242BLS)
-Teensy 4.x as main controller
-Custom power distribution (TDK-Lambda i7A, BTS443P)
-TVS protection and dedicated power rails
-Sensors
-Absolute joint encoders (AS5600, MT6835)
-Microswitches for limit/reference detection
-Encoder diagnostics via AGC/MAG monitoring
-Calibration & Modeling
-Per-joint angle calibration using absolute encoders
-Linear servo-to-angle models used as kinematic input
-Calibration performed per leg; representative data is published
-Data used to validate inverse kinematics consistency
-Repository Structure (high-level)
+# Overview
+
+Custom modular hexapod robot designed from scratch with focus on:
+
+- mechanically serviceable leg modules
+- encoder-supervised motion
+- repeatable per-joint calibration
+- distributed electronics architecture
+- robust power and safety management
+- predictable kinematic behavior
+
+The platform is designed primarily for stable object transport and long-term maintainability rather than high-speed locomotion.
+
+---
+
+# Hardware Architecture
+
+## Mechanical System
+
+- Aluminium laser-cut chassis and leg structures
+- Modular leg assemblies
+- 3D-printed structural interfaces
+- Lever-assisted femur/tibia transmission where required
+
+## Electronics & Power
+
+- Teensy 4.1 real-time controller
+- Distributed custom PCBs:
+  - central controller board
+  - dedicated power board
+  - independent leg logic boards
+- TDK-Lambda i7A servo power stage
+- BTS443P protected high-side switching
+- Hardware UVLO and fault handling
+- Separate logic and servo power domains
+
+## Sensors & Feedback
+
+- Absolute magnetic encoders on all joints
+  - AS5600 (I2C)
+  - MT6835 (SPI)
+- Foot contact microswitches
+- Encoder health monitoring via AGC/MAG diagnostics
+- Motion supervision using encoder feedback
+
+---
+
+# Calibration Approach
+
+Each joint is individually calibrated using absolute encoders.
+
+Servo response is characterized and converted into joint-space models used directly by the kinematic system.
+
+Calibration data is used to:
+
+- reduce inter-leg variation
+- validate inverse kinematics consistency
+- monitor mechanical repeatability
+- compensate assembly tolerances
+
+Representative calibration data and measurements are included in the documentation.
+
+---
+
+# Repository Structure
+
+```text
 3D/
-CAD models, laser-cut parts (DXF), and 3D-printable components (STEP/STL)
+    CAD models, laser-cut parts, STEP/STL files
 
 electronics/
-Schematics, PCB design files, and Gerber outputs
+    Schematics, PCB layouts, manufacturing files, and hardware notes
 
 docs/
-Calibration data, measurements, test results, development notes, and current prototype images.
+    Calibration data, measurements, prototype images, and development notes
 
 firmware/
-Intentionally omitted at this stage
-
-Project Status
-Completed
-
-Prototype leg mechanics and assembly
-Encoder calibration and diagnostics
-Servo linearity characterization
-Power PCB design and validation
-In Progress
-
-Body frame fabrication
-Mechanical refinement of leg assemblies
-Power system stress testing
-Planned
-
-Firmware development (Teensy 4.x)
-Full inverse kinematics
-Gait generation
-Six-leg integration
+    Firmware development, calibration tools, diagnostics, and control software
