@@ -17,9 +17,21 @@ Custom modular hexapod robot designed from scratch with focus on:
 - repeatable per-joint calibration
 - distributed electronics architecture
 - robust power and safety management
+- expandable sensing and communication architecture
 - predictable kinematic behavior
 
 The platform is designed primarily for stable object transport and long-term maintainability rather than high-speed locomotion.
+
+---
+
+# Development Videos
+
+## Closed-Loop Prototype Leg Test
+
+Validation of encoder feedback, joint calibration, and closed-loop position control on the first prototype leg.
+
+YouTube:
+[Video Link]
 
 ---
 
@@ -35,6 +47,7 @@ The platform is designed primarily for stable object transport and long-term mai
 ## Electronics & Power
 
 - Teensy 4.1 real-time controller
+- ESP32 dedicated to external communications and future high-level interfaces
 - Distributed custom PCBs:
   - central controller board
   - dedicated power board
@@ -49,9 +62,11 @@ The platform is designed primarily for stable object transport and long-term mai
 - Absolute magnetic encoders on all joints
   - AS5600 (I2C)
   - MT6835 (SPI)
-- Foot contact microswitches
 - Encoder health monitoring via AGC/MAG diagnostics
 - Motion supervision using encoder feedback
+- Foot contact detection via microswitches
+- Per-leg current monitoring through BTS443P current sense outputs
+- Provision for future external sensors and expansion modules
 
 ---
 
@@ -66,23 +81,8 @@ Calibration data is used to:
 - reduce inter-leg variation
 - validate inverse kinematics consistency
 - monitor mechanical repeatability
-- compensate assembly tolerances
+- compensate assembly tolerances and backlash
 
 Representative calibration data and measurements are included in the documentation.
 
----
-
-# Repository Structure
-
-```text
-3D/
-    CAD models, laser-cut parts, STEP/STL files
-
-electronics/
-    Schematics, PCB layouts, manufacturing files, and hardware notes
-
-docs/
-    Calibration data, measurements, prototype images, and development notes
-
-firmware/
-    Firmware development, calibration tools, diagnostics, and control software
+Calibration data is also used for motion validation and diagnostic measurements during development.
