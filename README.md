@@ -1,5 +1,13 @@
 # Hexapod – Modular Six-Leg Robot
 
+<p align="center">
+  <a href="https://youtube.com/shorts/XEZbHN9y0pI">
+    <img src="docs/images/closed_loop_leg_thumbnail.jpg" width="900">
+  </a>
+  <br>
+  <em>Closed-loop prototype leg validation test</em>
+</p>
+
 Work in progress.
 
 This repository documents the development of a custom modular hexapod robot, including mechanics, electronics, sensing, calibration procedures, and system architecture.
@@ -21,17 +29,6 @@ Custom modular hexapod robot designed from scratch with focus on:
 - predictable kinematic behavior
 
 The platform is designed primarily for stable object transport and long-term maintainability rather than high-speed locomotion.
-
----
-
-# Development Videos
-
-## Closed-Loop Prototype Leg Test
-
-Validation of encoder feedback, joint calibration, and closed-loop position control on the first prototype leg.
-
-YouTube:
-[Video Link]
 
 ---
 
