@@ -96,3 +96,14 @@ Calibration data is used to:
 Representative calibration data and measurements are included in the documentation.
 
 Calibration data is also used for motion validation and diagnostic measurements during development.
+
+---
+
+# Project Gallery
+
+Development images documenting the evolution of the project are available in:
+
+- [Leg Prototype](docs/images/leg_prototype/)
+- [Build Progress](docs/images/build_progress/)
+
+The galleries include prototype development, calibration work, mechanical assembly, PCB production, anodizing experiments, and major project milestones.
