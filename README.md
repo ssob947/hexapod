@@ -36,22 +36,34 @@ The platform is designed primarily for stable object transport and long-term mai
 
 ## Mechanical System
 
-- Aluminium laser-cut chassis and leg structures
-- Modular leg assemblies
-- 3D-printed structural interfaces
-- Lever-assisted femur/tibia transmission where required
+- Aluminium laser-cut chassis and structural components
+- Modular leg assemblies designed for independent manufacturing, testing, and replacement
+- 3D-printed structural and interface parts
+- Lever-assisted femur and tibia transmission system for increased joint torque
+- Serviceable design with emphasis on maintainability and repeatable assembly
 
 ## Electronics & Power
 
-- Teensy 4.1 real-time controller
-- ESP32 dedicated to external communications and future high-level interfaces
-- Distributed custom PCBs:
-  - central controller board
-  - dedicated power board
-  - independent leg logic boards
-- TDK-Lambda i7A servo power stage
-- BTS443P protected high-side switching
-- Hardware UVLO and fault handling
+- 4S LiPo power system
+- TDK-Lambda i7A high-current converter supplying the global servo power rail
+- Dedicated MAIN_power board responsible for:
+  - power distribution
+  - protection and safety functions
+  - UVLO generation and monitoring
+- Dedicated MAIN_logic board hosting:
+  - Teensy 4.1 real-time controller
+  - ESP32 dedicated to external communications and future high-level interfaces
+  - communication infrastructure and system diagnostics
+- Independent LEG_power module for each leg featuring:
+  - protected actuator power distribution
+  - BTS443P high-side switching
+  - current monitoring and fault detection
+- Independent LEG_logic module for each leg featuring:
+  - encoder interfaces
+  - sensing and diagnostics
+  - local communication infrastructure
+- Differential communication architecture between controller and leg modules
+- Hardware UVLO and power fault management
 - Separate logic and servo power domains
 
 ## Sensors & Feedback
@@ -59,10 +71,11 @@ The platform is designed primarily for stable object transport and long-term mai
 - Absolute magnetic encoders on all joints
   - AS5600 (I2C)
   - MT6835 (SPI)
-- Encoder health monitoring via AGC/MAG diagnostics
+- Encoder health monitoring through AGC and MAG diagnostics
 - Motion supervision using encoder feedback
 - Foot contact detection via microswitches
 - Per-leg current monitoring through BTS443P current sense outputs
+- Support for individual leg fault detection and future selective leg shutdown strategies
 - Provision for future external sensors and expansion modules
 
 ---
