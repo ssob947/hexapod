@@ -1,10 +1,10 @@
 # MAIN_logic
 
-![MAIN_logic PCB](main_logic_pcb_v0.1.png)
+![MAIN_logic PCB](IMG_20260315_175543760~3.jpg)
 
 Central controller board for the hexapod robot.
 
-The board hosts the real-time robot controller, external communication subsystem, diagnostic interfaces, and system-level control signals.
+The board hosts the real-time robot controller, external communication subsystem, diagnostic interfaces, and system-level power and safety management functions.
 
 ---
 
@@ -15,7 +15,8 @@ The board hosts the real-time robot controller, external communication subsystem
 - I2C multiplexing for leg communication channels
 - Differential I2C interfaces toward leg modules
 - SPI chip-select distribution for coxa encoders
-- Servo power enable / inhibit control through the KILL bus
+- Individual leg power control through the KILL bus
+- Global servo power control through Lambda enable
 - UVLO status monitoring from the MAIN_power board
 - External safety switch and reset interfaces
 - Expansion headers for future sensors and peripherals
@@ -36,9 +37,10 @@ Leg communication channels are routed through an I2C multiplexer and dedicated d
 
 The board provides system-level interfaces for:
 
-- Lambda converter enable control
+- Global servo power enable through the Lambda converter
+- Individual leg shutdown through the KILL bus
 - UVLO status monitoring
-- Servo power disable through external safety input
+- External emergency stop interface
 - Teensy reset access
 - General-purpose I/O expansion
 
@@ -48,4 +50,6 @@ The board provides system-level interfaces for:
 
 MAIN_logic separates real-time robot control from external communication and system management.
 
-This allows the Teensy to focus on deterministic control tasks while the ESP32 handles external connectivity and future high-level interfaces.
+This architecture allows deterministic control on the Teensy while the ESP32 handles external connectivity and future high-level interfaces.
+
+Power distribution, diagnostics, and safety functions are managed independently to improve fault isolation and system maintainability.
