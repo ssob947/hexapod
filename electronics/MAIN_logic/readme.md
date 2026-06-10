@@ -1,7 +1,7 @@
 # MAIN_logic
 
 <p align="center">
-  <img src="MAIN_logic_img.jpg" width="300">
+  <img src="MAIN_logic_img.jpg" width="500">
 </p>
 
 Central controller board for the hexapod robot.
