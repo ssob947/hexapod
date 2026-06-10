@@ -1,6 +1,6 @@
 # LEG_logic
 
-![LEG_logic PCB](leg_logic_pcb_v0.1.png)
+<img src="LEG_logic_img.jpg" width="550">
 
 Per-leg sensing and communication board used by each hexapod leg.
 
