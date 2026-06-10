@@ -1,6 +1,6 @@
 # LEG_power
 
-<img src="LEG_power_img.jpg" width="650">
+<img src="LEG_power_img.jpg" width="550">
 
 Per-leg power distribution and protection board used by each hexapod leg.
 
