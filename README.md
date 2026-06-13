@@ -46,7 +46,7 @@ The platform is designed primarily for stable object transport and long-term mai
 
 ## Electronics & Power 
 
-<img src="docs/images/build_progress/09_all_pcbs_installed.jpg" width="200">
+<img src="docs/images/build_progress/09_all_pcbs_installed.jpg" width="250">
 
 - 4S LiPo power system
 - TDK-Lambda i7A high-current converter supplying the global servo power rail
