@@ -36,6 +36,8 @@ The platform is designed primarily for stable object transport and long-term mai
 
 ## Mechanical System
 
+<img src="docs/images/build_progress/11_all_legs.jpg" width="400">
+
 - Aluminium laser-cut chassis and structural components
 - Modular leg assemblies designed for independent manufacturing, testing, and replacement
 - 3D-printed structural and interface parts
