@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://youtube.com/shorts/XEZbHN9y0pI">
-    <img src="docs/images/leg_prototype/closed_loop_leg_thumbnail.png" width="400">
+    <img src="docs/images/leg_prototype/closed_loop_leg_thumbnail.png" width="300">
   </a>
   <br>
   <em>Closed-loop prototype leg validation test</em>
