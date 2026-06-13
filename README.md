@@ -44,7 +44,9 @@ The platform is designed primarily for stable object transport and long-term mai
 - Lever-assisted femur and tibia transmission system for increased joint torque
 - Serviceable design with emphasis on maintainability and repeatable assembly
 
-## Electronics & Power <img src="docs/images/build_progress/09_all_pcbs_installed.jpg" width="400">
+## Electronics & Power 
+
+<img src="docs/images/build_progress/09_all_pcbs_installed.jpg" width="200">
 
 - 4S LiPo power system
 - TDK-Lambda i7A high-current converter supplying the global servo power rail
